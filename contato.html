@@ -7,6 +7,7 @@
     <meta name="author" content="Generation Brasil" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Contato</title>
   </head>
 
@@ -27,50 +28,44 @@
     </header>
 
     <!-- Seção Principal da Página (main) -->
-    <main>
+    <main class="main_contato">
       <!-- Seção Principal da Página (main) -->
       <main>
         <!-- Seção do Formulário -->
         <form action="#" method="post" id="formulario">
-          <div>
-            <label for="name">Nome:</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Digite seu nome"
-            />
-            <span id="errNome"></span>
-          </div>
+          <label for="name">Nome:</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Digite seu nome"
+          />
+          <span id="errNome"></span>
 
-          <div>
-            <label for="email">Email:</label>
-            <input
-              id="email"
-              type="text"
-              name="email"
-              placeholder="Digite seu email"
-            />
-            <span></span>
-          </div>
-          <div>
-            <label for="subject">Assunto:</label>
-            <input
-              id="subject"
-              type="text"
-              name="subject"
-              placeholder="Digite o assunto da mensagem"
-            />
-            <span></span>
-          </div>
-          <div>
-            <label for="message">Mensagem</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Digite sua mensagem"
-            ></textarea>
-          </div>
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Digite seu email"
+          />
+          <span></span>
+
+          <label for="subject">Assunto:</label>
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            placeholder="Digite o assunto da mensagem"
+          />
+          <span></span>
+
+          <label for="message">Mensagem</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Digite sua mensagem"
+          ></textarea>
 
           <button type="submit">Enviar</button>
         </form>
