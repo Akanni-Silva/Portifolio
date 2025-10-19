@@ -12,22 +12,34 @@
   </head>
   <body>
     <header>
-      <h1>Portfolio Akanni Silva</h1>
+      <h1>Projetos</h1>
+
+      <!-- Checkbox oculto que controla o menu -->
+      <input type="checkbox" id="menu-toggle" />
+
+      <!-- Ícone do menu hambúrguer -->
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- O NAV vem logo em seguida -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="rpg.html">RPG</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="about">
-        <h2>Sobre Akanni Silva</h2>
+        <h2>Sobre Mim</h2>
 
         <article>
-          <img
+          <img id="perfil"
             src="https://avatars.githubusercontent.com/u/197610584?v=4"
             alt="Foto do criador do conteúdo"
           />
@@ -36,27 +48,27 @@
             Minha trajetória? Eu saí diretamente da Sala de Controle e
             Otimização, onde era Gerente de Tráfego e Auditor, especialista em
             evitar falhas e turbinar resultados, então percebi que ficar só
-            ajustando o placar era pouco, para mim. Eu queria construir a Milenium Falcon,
-            a máquina que resolve o problema na velocidade da luz. Por isso, fiz
-            a transição para o Dev Full Stack, com foco em Node.js, TypeScript e
-            React, trazendo para o código a mesma visão de um Arquiteto de
-            Soluções. Se você quer entender como desenvolvi a habilidade de
-            gerenciar o caos e prever cenários tipo o Dr. Estranho?! É simples!!
-            nas horas vagas, sou Mestre de RPG, liderando missões e narrativas
-            complexas. Em resumo, eu pego o desafio nível Dark Souls e
-            transformo em uma solução prática e épica, que funciona de
-            primeira... na maior parte das vezes, é claro. Afinal, o mais importante é persistir.
+            ajustando o placar era pouco, para mim. Eu queria construir a
+            Milenium Falcon, a máquina que resolve o problema na velocidade da
+            luz. Por isso, fiz a transição para o Dev Full Stack, com foco em
+            Node.js, TypeScript e React, trazendo para o código a mesma visão de
+            um Arquiteto de Soluções. Se você quer entender como desenvolvi a
+            habilidade de gerenciar o caos e prever cenários tipo o Dr.
+            Estranho?! É simples!! nas horas vagas, sou Mestre de RPG, liderando
+            missões e narrativas complexas. Em resumo, eu pego o desafio nível
+            Dark Souls e transformo em uma solução prática e épica, que funciona
+            de primeira... na maior parte das vezes, é claro. Afinal, o mais
+            importante é persistir.
           </p>
         </article>
       </section>
 
       <section id="video">
-        <h2>Meu vídeo favorito:</h2>
+        <h2>Meu vídeo favorito</h2>
 
         <figure>
           <iframe
-            width="951"
-            height="535"
+            class="frame_video"
             src="https://www.youtube.com/embed/I4OB36SQjIA?autoplay=1&mute=1"
             title="A Historia NÃO contada de Dark Souls"
             frameborder="0"

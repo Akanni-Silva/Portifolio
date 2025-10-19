@@ -18,6 +18,16 @@ body {
   background: var(--corsecundaria);
   color: var(--preto);
   font-family: sans-serif;
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
 }
 
 h1,
@@ -32,8 +42,11 @@ h1 {
 }
 
 h2 {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
   color: var(--corquartenaria);
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem 0;
   font-weight: 600;
 }
@@ -55,6 +68,10 @@ section {
   margin: 2rem auto;
 }
 
+figcaption {
+  color: var(--corsecundaria);
+}
+
 header {
   background: var(--corprimaria);
   padding: 1rem 2rem;
@@ -63,6 +80,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
+  margin-bottom: auto;
 }
 
 nav ul {
@@ -71,40 +89,77 @@ nav ul {
   gap: 1rem;
 }
 
-nav a {
+a {
   color: var(--corsecundaria);
   font-size: 1.1rem;
   text-decoration: none;
 }
 
-nav a:hover {
+a:hover {
   color: var(--corquartenaria);
   text-decoration: underline;
 }
 
 #about article {
+  background-color: var(--corprimaria);
+  padding: 1.5rem 2rem;
+  border-radius: 5cap;
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-#about_rpg article {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-#about_rpg img {
-  width: 200px;
-  height: 250px;
-  flex-shrink: 0;
+#about p {
+  color: var(--corsecundaria);
 }
 
 #about img {
-  width: 200px;
   flex-shrink: 0;
+}
+
+#perfil {
+  width: 200px;
   border-radius: 50%;
 }
 
+.descricao h3 {
+  margin-bottom: 1rem;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.descricao a {
+  margin-top: 0.5rem;
+}
+
+.cardProjeto article {
+  background-color: var(--corprimaria);
+  padding: 1.5rem 2rem;
+  border-radius: 5cap;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cardProjeto p {
+  color: var(--corsecundaria);
+}
+
+.cardProjeto img {
+  width: 350px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 1cap;
+}
+
+.cardProjeto {
+  justify-items: center;
+}
 #about p {
   flex: 1;
 }
@@ -112,6 +167,12 @@ nav a:hover {
 #video figure {
   display: flex;
   justify-content: center;
+}
+
+.frame_video {
+  width: 90vw;
+  aspect-ratio: 16/9;
+  border-radius: 4%;
 }
 
 footer {
@@ -195,25 +256,133 @@ form span {
   font-size: 0.75rem;
 }
 
-.article_mapa{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background: var(--corquartenaria);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
+.article_mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--corquartenaria);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
 }
 
-.article_mapa address{
-    width: 75%;
+.article_mapa address {
+  width: 75%;
 }
 
 .article_mapa address p {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .article_mapa iframe {
+  align-self: center;
+}
+
+/* menu hamburbger */
+
+#menu-toggle {
+  display: none;
+}
+
+/* Ícone do menu */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2000;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--corsecundaria);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+/* modo mobile */
+
+@media (max-width: 932px) {
+  #about article {
+    display: grid;
+    justify-items: center;
+  }
+
+  .cardProjeto img {
+    width: 80vw;
+    height: 25vh;
+    flex-shrink: 0;
+    border-radius: 1cap;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* page contato */
+
+  .main_contato {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .article_mapa iframe {
     align-self: center;
+    width: 80vw;
+  }
+
+  .descricao h3 {
+    margin-bottom: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 819px) {
+  /* Mostra o ícone e esconde o menu */
+  .menu-icon {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--corprimaria);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  /* Exibe o menu quando o checkbox está marcado */
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+  }
+
+  /* Animação do ícone */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  nav a {
+    font-size: 1.3rem;
+  }
 }
