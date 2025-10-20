@@ -151,10 +151,11 @@ a:hover {
 }
 
 .cardProjeto img {
-  width: 350px;
-  height: 200px;
+  height: 270px;
   flex-shrink: 0;
-  border-radius: 1cap;
+  border-radius: 4cap;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .cardProjeto {
@@ -322,6 +323,8 @@ form span {
     border-radius: 1cap;
     margin-bottom: 0;
     padding-bottom: 0;
+    aspect-ratio: 16 / 9;
+  object-fit: cover;
   }
 
   /* page contato */
